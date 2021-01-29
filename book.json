@@ -5,13 +5,14 @@
   "language": "zh-hans",
   "links": {
     "sidebar": {
-      "开放平台": "http://e.cnpc.com.cn/opensdk/"
+      "橘子's Blog": "https://github.com/hillkinsh"
     }
   },
   "styles":{
     "website":"style.css"
   },
   "plugins": [
+    "multipart",
     "-lunr",
     "-search",
     "-livereload",
