@@ -6,5 +6,7 @@
     * [第一层：基础阅读](chapter1/3.基础阅读.md)
     * [第二层：检视阅读](chapter1/4.检视阅读.md)
     * [第三层pre：学会提问](chapter1/5.学会提问.md)
-* [Chapter2](chapter2/README.md)
+* [Chapter2](chapter2/1.第三层:分析阅读.md)
+    * [书籍的分类](chapter2/2.书籍的分类.md)
+    * [透视一本书](chapter2/3.透视一本书.md)
 
