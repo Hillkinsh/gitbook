@@ -9,4 +9,5 @@
 * [Chapter2](chapter2/1.第三层:分析阅读.md)
     * [书籍的分类](chapter2/2.书籍的分类.md)
     * [透视一本书](chapter2/3.透视一本书.md)
+    * [评价一本书](chapter2/4.评价一本书.md)
 
