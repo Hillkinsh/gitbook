@@ -12,4 +12,5 @@
     * [评价一本书](chapter2/4.评价一本书.md)
 * [技术总结](chapter3/1.egg中间件.md)
     * [取消ajax请求](chapter3/2.取消ajax请求.md)
+* [查理芒格书单](chapter4/查理芒格书单.md)
 
