@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>取消ajax请求 · 博客</title>
+        <title>微信小程序保存图片 · 博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -75,10 +75,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="3.微信小程序生成菊花码.html" />
+    <link rel="next" href="../chapter4/查理芒格书单.html" />
     
     
-    <link rel="prev" href="1.egg中间件.html" />
+    <link rel="prev" href="3.微信小程序生成菊花码.html" />
     
 
     </head>
@@ -272,7 +272,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="2.取消ajax请求.html">
+        <li class="chapter " data-level="1.4.1" data-path="2.取消ajax请求.html">
             
                 <a href="2.取消ajax请求.html">
             
@@ -298,7 +298,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="4.微信小程序保存图片.html">
+        <li class="chapter active" data-level="1.4.3" data-path="4.微信小程序保存图片.html">
             
                 <a href="4.微信小程序保存图片.html">
             
@@ -359,7 +359,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >取消ajax请求</a>
+        <a href=".." >微信小程序保存图片</a>
     </h1>
 </div>
 
@@ -374,60 +374,88 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;"><b>1. </b>&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;</a></li><ul><li><span class="title-icon "></span><a href="#&#x539F;&#x751F;"><b>1.1. </b>&#x539F;&#x751F;</a></li><li><span class="title-icon "></span><a href="#jq"><b>1.2. </b>jq</a></li><li><span class="title-icon "></span><a href="#axios"><b>1.3. </b>axios</a></li></ul></ul></div><a href="#&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;"><a name="&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;</h1>
-<p>&#x5F53;&#x5BC6;&#x96C6;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x4EE5;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x7684;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x4E3A;&#x51C6;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x524D;&#x9762;&#x505A;&#x7684;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x53D6;&#x6D88;&#x6389;&#x3002;&#x4E0D;&#x7136;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;&#xFF0C;&#x540E;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x7ED3;&#x679C;&#x5148;&#x4E8E;&#x524D;&#x4E00;&#x6B21;&#x7684;&#xFF0C;&#x5BFC;&#x81F4;&#x5C55;&#x793A;&#x5185;&#x5BB9;&#x4E0D;&#x662F;&#x60F3;&#x8981;&#x7684;&#x3002;</p>
-<h2 id="&#x539F;&#x751F;"><a name="&#x539F;&#x751F;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x751F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x539F;&#x751F;</h2>
-<p>&#x8C03;&#x7528;&#x672C;&#x6B21;&#x5B9E;&#x4F8B;&#x7684;abort&#x65B9;&#x6CD5;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> native = <span class="hljs-keyword">new</span> XMLHttpRequest();
-native.open(<span class="hljs-string">&quot;GET&quot;</span>,<span class="hljs-string">&quot;https://api.github.com/&quot;</span>);
-native.send();
-native.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
-    <span class="hljs-keyword">if</span>(native.readyState==<span class="hljs-number">4</span>&amp;&amp;native.status==<span class="hljs-number">200</span>){
-        <span class="hljs-built_in">console</span>.log(native.response);           
-    }<span class="hljs-keyword">else</span>{
-        <span class="hljs-built_in">console</span>.log(native.status);
-    }
-}
-native.abort();
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4FDD;&#x5B58;&#x56FE;&#x7247;"><b>1. </b>&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4FDD;&#x5B58;&#x56FE;&#x7247;</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x83B7;&#x53D6;canvas"><b>1.1. </b>1. &#x83B7;&#x53D6;canvas</a></li><li><span class="title-icon "></span><a href="#2-&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x7684;&#x6388;&#x6743;"><b>1.2. </b>2. &#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x7684;&#x6388;&#x6743;</a></li></ul></ul></div><a href="#&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4FDD;&#x5B58;&#x56FE;&#x7247;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4FDD;&#x5B58;&#x56FE;&#x7247;"><a name="&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4FDD;&#x5B58;&#x56FE;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4FDD;&#x5B58;&#x56FE;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x4FDD;&#x5B58;&#x56FE;&#x7247;</h1>
+<p>&#x8FD9;&#x4E2A;&#x4E4B;&#x6240;&#x4EE5;&#x4E5F;&#x613F;&#x610F;&#x62FF;&#x6765;&#x8BF4;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x9488;&#x5BF9;&#x4FDD;&#x5B58;&#x662F;&#x7684;&#x5751;&#x6765;&#x8BF4;&#x7684;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> saveImg() {
+    <span class="hljs-keyword">let</span> self = <span class="hljs-keyword">this</span>;
+    Modal.showLoading({
+      title: <span class="hljs-string">&apos;&#x751F;&#x6210;&#x4E2D;...&apos;</span>
+    });
+    wx.hideTabBar({
+      animation: <span class="hljs-literal">true</span>,
+    });
+    <span class="hljs-keyword">this</span>.setData({
+      hideModal: <span class="hljs-literal">false</span>,
+    });
+    <span class="hljs-keyword">const</span> query = wx.createSelectorQuery();
+    <span class="hljs-keyword">this</span>.drawCanvasImg().then(<span class="hljs-keyword">async</span> res =&gt; {
+      Modal.hideLoading();
+      <span class="hljs-keyword">const</span> canvasObj = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+        query.select(<span class="hljs-string">&apos;#posterCanvas&apos;</span>)
+          .fields({ node: <span class="hljs-literal">true</span>, size: <span class="hljs-literal">true</span> })
+          .exec(<span class="hljs-keyword">async</span> (res) =&gt; {
+            resolve(res[<span class="hljs-number">0</span>].node);
+          });
+      });
+      wx.canvasToTempFilePath({
+        canvas: canvasObj, <span class="hljs-comment">//&#x73B0;&#x5728;&#x7684;&#x5199;&#x6CD5;</span>
+        success: (res) =&gt; {
+          Modal.hideLoading();
+          self.setData({ canClose: <span class="hljs-literal">true</span> });
+          <span class="hljs-comment">//&#x4FDD;&#x5B58;&#x56FE;&#x7247;</span>
+          wx.saveImageToPhotosAlbum({
+            filePath: res.tempFilePath,
+            success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+              Modal.showToast({
+                title: <span class="hljs-string">&apos;&#x56FE;&#x7247;&#x5DF2;&#x4FDD;&#x5B58;&#x5230;&#x76F8;&#x518C;&#x4E2D;&#xFF0C;&#x5FEB;&#x53BB;&#x67E5;&#x770B;&#x5427;&#xFF5E;&apos;</span>,
+                icon: <span class="hljs-string">&apos;none&apos;</span>,
+                duration: <span class="hljs-number">2000</span>
+              });
+            },
+            fail: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+              <span class="hljs-built_in">console</span>.log(err);
+              Modal.hideLoading();
+              <span class="hljs-keyword">if</span> (err.errMsg === <span class="hljs-string">&quot;saveImageToPhotosAlbum:fail auth deny&quot;</span>
+              || err.errMsg === <span class="hljs-string">&quot;saveImageToPhotosAlbum:fail:auth denied&quot;</span>
+              || err.errMsg === <span class="hljs-string">&quot;saveImageToPhotosAlbum:fail authorize no response&quot;</span>
+              <span class="hljs-comment">// || err.errMsg === &quot;saveImageToPhotosAlbum:fail system deny&quot;</span>
+              ) {
+                self.closeModal();
+                wx.showModal({
+                  title: <span class="hljs-string">&apos;&#x63D0;&#x793A;&apos;</span>,
+                  content: <span class="hljs-string">&apos;&#x9700;&#x8981;&#x60A8;&#x6388;&#x6743;&#x4FDD;&#x5B58;&#x76F8;&#x518C;&apos;</span>,
+                  showCancel: <span class="hljs-literal">false</span>,
+                  success: modalSuccess =&gt; {
+                    self.getPhotosAuthorize();
+                  }
+                });
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (err.errMsg === <span class="hljs-string">&quot;saveImageToPhotosAlbum:fail system deny&quot;</span>) {
+                Modal.showToast({
+                  title: <span class="hljs-string">&apos;&#x8BF7;&#x5148;&#x6253;&#x5F00;&#x7167;&#x7247;&#x5141;&#x8BB8;&#x5FAE;&#x4FE1;&#x7684;&#x8BFB;&#x5199;&#x6743;&#x9650;&#xFF5E;&apos;</span>,
+                  icon: <span class="hljs-string">&apos;none&apos;</span>,
+                  duration: <span class="hljs-number">5000</span>
+                });
+              } <span class="hljs-keyword">else</span> {
+              }
+            },
+            complete(res) {
+              <span class="hljs-built_in">console</span>.log(res);
+            }
+          })
+        },
+        fail(res) {
+          <span class="hljs-built_in">console</span>.log(res);
+        }
+      }, <span class="hljs-keyword">this</span>);
+    });
+  },
 </code></pre>
-<h2 id="jq"><a name="jq" class="anchor-navigation-ex-anchor" href="#jq"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. jq</h2>
-<p>jQuery&#x4E3A;&#x6211;&#x4EEC;&#x5C01;&#x88C5;&#x4E86;ajax&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#xFF0C;&#x5728;jQuery&#x4E2D;&#xFF0C;&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;&#x4E5F;&#x662F;&#x901A;&#x8FC7;&#x8C03;&#x7528;.abort()&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x64CD;&#x4F5C;&#x7684;&#x5BF9;&#x8C61;&#x4E0D;&#x518D;&#x662F;&#x539F;&#x751F;XHR&#x5BF9;&#x8C61;&#x3002;
-&#x53D6;&#x6D88;ajax&#x4E4B;&#x540E;&#xFF0C;jQuery&#x5C01;&#x88C5;&#x7684;ajax&#x5BF9;&#x8C61;&#x5C31;&#x4F1A;&#x6267;&#x884C;error&#x5BF9;&#x5E94;&#x7684;&#x51FD;&#x6570;</p>
-<pre><code class="lang-js">j
-
-<span class="hljs-keyword">var</span> jp = $.ajax({
-    type:<span class="hljs-string">&quot;get&quot;</span>,
-    url:<span class="hljs-string">&quot;https://api.github.com/&quot;</span>,
-    dataType:<span class="hljs-string">&quot;json&quot;</span>,
-    success:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
-        <span class="hljs-built_in">console</span>.log(data);
-    },
-    error:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>)</span>{
-        <span class="hljs-built_in">console</span>.log(err);
-    }
-})
-jp.abort();
-</code></pre>
-<h2 id="axios"><a name="axios" class="anchor-navigation-ex-anchor" href="#axios"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. axios</h2>
-<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;axios&#x53D1;&#x9001;ajax&#x8BF7;&#x6C42;&#x3002;&#x5728;axios&#x4E2D;&#x53D6;&#x6D88;ajax&#x8BF7;&#x6C42;&#x4E0D;&#x540C;&#x4E8E;&#x4E0A;&#x9762;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#xFF0C;&#x5728;axios&#x4E2D;&#x662F;&#x901A;&#x8FC7;axios.CancelToken.source()&#x65B9;&#x6CD5;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> CancelToken = axios.CancelToken;
-<span class="hljs-keyword">var</span> source = CancelToken.source();
-
-axios({
-    method:<span class="hljs-string">&quot;GET&quot;</span>,
-    url:<span class="hljs-string">&quot;https://api.github.com/&quot;</span>,
-    cancelToken:source.token
-    <span class="hljs-comment">//cancelToken&#x7684;&#x503C;&#x8D77;&#x6807;&#x8BC6;&#x4F5C;&#x7528;&#xFF0C;&#x6807;&#x8BC6;&#x7531;source&#x63A7;&#x5236;&#x7684;&#x3001;&#x5C06;&#x8981;&#x88AB;&#x53D6;&#x6D88;&#x7684;ajax&#x64CD;&#x4F5C;</span>
-}).then((res) =&gt; {
-    <span class="hljs-built_in">console</span>.log(res.data);
-}).catch((err) =&gt; {
-    <span class="hljs-built_in">console</span>.log(err);
-});
-
-source.cancel(<span class="hljs-string">&apos;Operation canceled by the user.&apos;</span>);
-</code></pre>
+<h2 id="1-&#x83B7;&#x53D6;canvas"><a name="1-&#x83B7;&#x53D6;canvas" class="anchor-navigation-ex-anchor" href="#1-&#x83B7;&#x53D6;canvas"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1. &#x83B7;&#x53D6;canvas</h2>
+<pre><code> query = wx.createSelectorQuery();
+</code></pre><h2 id="2-&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x7684;&#x6388;&#x6743;"><a name="2-&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x7684;&#x6388;&#x6743;" class="anchor-navigation-ex-anchor" href="#2-&#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x7684;&#x6388;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 2. &#x4FDD;&#x5B58;&#x56FE;&#x7247;&#x7684;&#x6388;&#x6743;</h2>
+<p>&#x5982;&#x4E0A;&#x9762;&#x4EE3;&#x7801; </p>
 <footer class="page-footer"><span class="copyright">&#xA9;hillkinsham@gmail.com all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x6863;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF1A;
-2021-03-11 10:57:22
+2021-03-24 21:52:05
 </span></footer>
                                 
                                 </section>
@@ -455,12 +483,12 @@ source.cancel(<span class="hljs-string">&apos;Operation canceled by the user.&ap
 
             
                 
-                <a href="1.egg中间件.html" class="navigation navigation-prev " aria-label="Previous page: 技术总结">
+                <a href="3.微信小程序生成菊花码.html" class="navigation navigation-prev " aria-label="Previous page: 微信小程序生成菊花码">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="3.微信小程序生成菊花码.html" class="navigation navigation-next " aria-label="Next page: 微信小程序生成菊花码">
+                <a href="../chapter4/查理芒格书单.html" class="navigation navigation-next " aria-label="Next page: 查理芒格书单">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -471,7 +499,7 @@ source.cancel(<span class="hljs-string">&apos;Operation canceled by the user.&ap
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"取消ajax请求","level":"1.4.1","depth":2,"next":{"title":"微信小程序生成菊花码","level":"1.4.2","depth":2,"path":"chapter3/3.微信小程序生成菊花码.md","ref":"chapter3/3.微信小程序生成菊花码.md","articles":[]},"previous":{"title":"技术总结","level":"1.4","depth":1,"path":"chapter3/1.egg中间件.md","ref":"chapter3/1.egg中间件.md","articles":[{"title":"取消ajax请求","level":"1.4.1","depth":2,"path":"chapter3/2.取消ajax请求.md","ref":"chapter3/2.取消ajax请求.md","articles":[]},{"title":"微信小程序生成菊花码","level":"1.4.2","depth":2,"path":"chapter3/3.微信小程序生成菊花码.md","ref":"chapter3/3.微信小程序生成菊花码.md","articles":[]},{"title":"微信小程序保存图片","level":"1.4.3","depth":2,"path":"chapter3/4.微信小程序保存图片.md","ref":"chapter3/4.微信小程序保存图片.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["multipart","-lunr","-search","-livereload","-sharing","expandable-chapters","search-plus","splitter","github","-sharing","emphasize","include-codeblock","tbfed-pagefooter","back-to-top-button","anchor-navigation-ex"],"styles":{"website":"style.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;hillkinsham@gmail.com","modify_label":"文档更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"styles":{"website":"styles/website.css"},"emphasize":{},"github":{"url":"https://github.com/hillkinsh"},"splitter":{},"multipart":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"back-to-top-button":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"qq":false,"all":["weibo","qq","qzone","google","douban"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"hillkinsham001@gmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"博客","language":"zh-hans","links":{"sidebar":{"橘子's Blog":"https://github.com/hillkinsh"}},"gitbook":"*","description":"hillkinsh的知识博客"},"file":{"path":"chapter3/2.取消ajax请求.md","mtime":"2021-03-11T02:57:22.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-24T13:52:35.888Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"微信小程序保存图片","level":"1.4.3","depth":2,"next":{"title":"查理芒格书单","level":"1.5","depth":1,"path":"chapter4/查理芒格书单.md","ref":"chapter4/查理芒格书单.md","articles":[]},"previous":{"title":"微信小程序生成菊花码","level":"1.4.2","depth":2,"path":"chapter3/3.微信小程序生成菊花码.md","ref":"chapter3/3.微信小程序生成菊花码.md","articles":[]},"dir":"ltr"},"config":{"plugins":["multipart","-lunr","-search","-livereload","-sharing","expandable-chapters","search-plus","splitter","github","-sharing","emphasize","include-codeblock","tbfed-pagefooter","back-to-top-button","anchor-navigation-ex"],"styles":{"website":"style.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;hillkinsham@gmail.com","modify_label":"文档更新时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"styles":{"website":"styles/website.css"},"emphasize":{},"github":{"url":"https://github.com/hillkinsh"},"splitter":{},"multipart":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"back-to-top-button":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"qq":false,"all":["weibo","qq","qzone","google","douban"],"douban":true,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"hillkinsham001@gmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"博客","language":"zh-hans","links":{"sidebar":{"橘子's Blog":"https://github.com/hillkinsh"}},"gitbook":"*","description":"hillkinsh的知识博客"},"file":{"path":"chapter3/4.微信小程序保存图片.md","mtime":"2021-03-24T13:52:05.338Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-24T13:52:35.888Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
